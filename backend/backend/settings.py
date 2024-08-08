@@ -40,10 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'routes',
-    'users'
-    
-
+    'Products',
+    'users',
+    'customers_vendors',
+    'Employee_management'
     
 ]
 
