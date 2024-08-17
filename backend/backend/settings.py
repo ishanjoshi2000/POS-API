@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'Products',
     'users',
     'customers_vendors',
-    'Employee_management'
+    'Employee_management',
+    'Sales_purchase',
+    'LedgerAccounts'
     
 ]
 

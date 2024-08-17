@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.exceptions import ValidationError
 
+
 def validate_pan_no(value):
     if not value.isdigit() or len(value) != 9:
         raise ValidationError('PAN number must be exactly 9 digits long.')
