@@ -25,7 +25,7 @@ admin.site.site_header='PasalAdmin'
 admin.site.index_title='Admin'
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('products/',include('Products.urls')),
+    path('api/',include('Products.urls')),
     path('users/',include('users.urls')),
     url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),

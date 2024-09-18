@@ -55,11 +55,12 @@ class ProductUnit(models.Model):
     unit = models.ForeignKey(Unit, related_name='product_units', on_delete=models.CASCADE)
     conversion_rate = models.PositiveIntegerField()
     image = models.ImageField(upload_to='product_units', null=True, blank=True)
-    alternate_price=models.DecimalField()  
+    alternate_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
 
     def calculate_alternate_price(self):
         if self.alternate_price:
             return self.alternate_price
         return self.product.price * Decimal(self.conversion_rate)
+
     def __str__(self):
         return f"{self.unit.name} ({self.conversion_rate} {self.product.base_unit})"
